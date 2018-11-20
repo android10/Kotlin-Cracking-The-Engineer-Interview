@@ -26,9 +26,10 @@ local.properties
 .classpath
 .project
   
-# Android Studio
+# Intellij
 .idea
 .gradle
+gradle
 /*/local.properties
 /*/out
 /*/*/build
