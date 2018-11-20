@@ -24,7 +24,7 @@ apply plugin: 'application'
 
 sourceSets {
   main.kotlin.srcDirs += 'src/main/kotlin'
-  main.java.srcDirs += 'src/main/java'
+  test.kotlin.srcDirs += 'src/test/kotlin'
 }
 
 compileKotlin { kotlinOptions { jvmTarget = "$jvm_target" } }
@@ -33,8 +33,21 @@ compileTestKotlin { kotlinOptions { jvmTarget = "$jvm_target" } }
 mainClassName = 'com.fernandocejas.crackinginterview.MainKt'
 
 dependencies {
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+  implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
+  testImplementation 'org.jetbrains.kotlin:kotlin-test'
+  testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
   testImplementation 'org.amshove.kluent:kluent:1.42'
+}
+
+task runApplication(type: JavaExec) {
+  description 'Run the main application.'
+  classpath sourceSets.main.runtimeClasspath
+  main = "com.fernandocejas.crackinginterview.MainKt"
+}
+
+task runTests(dependsOn: ['test']) {
+  description 'Run all the tests.'
 }
