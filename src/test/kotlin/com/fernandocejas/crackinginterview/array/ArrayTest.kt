@@ -2,6 +2,7 @@ package com.fernandocejas.crackinginterview.array
 
 import org.amshove.kluent.`should be equal to`
 import org.amshove.kluent.`should contain all`
+import org.amshove.kluent.`should equal`
 import org.junit.jupiter.api.Test
 
 
@@ -40,5 +41,20 @@ internal class ArrayTest {
         array.removeDuplicates(arrayOf(0, 0, 0, 1)) `should contain all` arrayOf(0, 1)
         array.removeDuplicates(arrayOf(1, 2, 3)) `should contain all` arrayOf(1, 2, 3)
         array.removeDuplicates(arrayOf(2, 2, 4, 4, 4, 5, 5)) `should contain all` arrayOf(2, 4, 5)
+    }
+
+    @Test fun `should reverse array using language built in functionality`() {
+        array.reverseKotlin(arrayOf(2, 9, 0, 4, 2, 8, 1)) `should equal` arrayOf(1, 8, 2, 4, 0, 9, 2)
+        array.reverseKotlin(arrayOf(1, 2, 3)) `should equal` arrayOf(3, 2, 1)
+        array.reverseKotlin(arrayOf(0, 0, 1, 1)) `should equal` arrayOf(1, 1, 0, 0)
+        array.reverseKotlin(arrayOf(10, 11)) `should equal` arrayOf(11, 10)
+    }
+
+    @Test fun `should reverse array`() {
+        array.reverse(arrayOf(2, 9, 0, 4, 2, 8, 1)) `should equal` arrayOf(1, 8, 2, 4, 0, 9, 2)
+        array.reverse(arrayOf(1, 2, 3)) `should equal` arrayOf(3, 2, 1)
+        array.reverse(arrayOf(0, 0, 1, 1)) `should equal` arrayOf(1, 1, 0, 0)
+        array.reverse(arrayOf(10, 11)) `should equal` arrayOf(11, 10)
+        array.reverse(arrayOf("One", "Two", "Three")) `should equal` arrayOf("Three", "Two", "One")
     }
 }

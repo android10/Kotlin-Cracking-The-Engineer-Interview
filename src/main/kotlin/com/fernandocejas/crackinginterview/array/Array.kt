@@ -67,4 +67,33 @@ class Array {
         repeat(array.size) { set.add(array[it]) }
         return set.toTypedArray()
     }
+
+    /**
+     * PROBLEM:
+     * How do you reverse an array in place?
+     *
+     * SOLUTION:
+     * Solution -> O(n/2)
+     */
+    fun reverseKotlin(array: Array<Int>) = array.reversedArray()
+
+    /**
+     * PROBLEM:
+     * How do you reverse an array in place?
+     *
+     * SOLUTION:
+     * Solution -> O(n/2)
+     */
+    fun <T> reverse(array: Array<T>): Array<T> {
+        var reverseIndex = array.size - 1
+        for (i in array.indices) {
+            if (i >= reverseIndex) break
+
+            val tempValue = array[i]
+            array[i] = array[reverseIndex]
+            array[reverseIndex] = tempValue
+            reverseIndex--
+        }
+        return array
+    }
 }
