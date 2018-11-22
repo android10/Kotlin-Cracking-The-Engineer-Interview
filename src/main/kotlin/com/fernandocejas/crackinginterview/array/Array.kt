@@ -50,7 +50,7 @@ class Array {
      * How do you find the duplicate numbers on a given integer array?
      *
      * SOLUTION:
-     * Solution -> linear -> O(n)
+     * Linear -> O(n)
      */
     fun removeDuplicatesUsingSet(array: Array<Int>): Array<Int> =
             array.toHashSet().toTypedArray()
@@ -60,7 +60,7 @@ class Array {
      * How do you find the duplicate numbers on a given integer array?
      *
      * SOLUTION:
-     * Solution -> linear -> O(n)
+     * Linear -> O(n)
      */
     fun removeDuplicates(array: Array<Int>): Array<Int> {
         val set: MutableSet<Int> = HashSet()
@@ -73,7 +73,7 @@ class Array {
      * How do you reverse an array in place?
      *
      * SOLUTION:
-     * Solution -> O(n/2)
+     * O(n/2)
      */
     fun reverseKotlin(array: Array<Int>) = array.reversedArray()
 
@@ -82,7 +82,7 @@ class Array {
      * How do you reverse an array in place?
      *
      * SOLUTION:
-     * Solution -> O(n/2)
+     * O(n/2)
      */
     fun <T> reverse(array: Array<T>): Array<T> {
         var reverseIndex = array.size - 1
