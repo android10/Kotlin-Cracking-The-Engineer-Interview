@@ -2,7 +2,13 @@ package com.fernandocejas.crackinginterview.list
 
 class MyLinkedList<T> {
 
-    fun add(element: T): Unit = TODO()
+    private var numberOfElements = 0
+    private var head: Node? = null
+
+    fun add(element: T) {
+        numberOfElements++
+        TODO()
+    }
 
     fun add(element: T, position: Int): Unit = TODO()
 
@@ -10,9 +16,11 @@ class MyLinkedList<T> {
 
     fun get(position: Int): T = TODO()
 
-    fun size(): Int = TODO()
+    fun size(): Int = numberOfElements
 
-    private inner class Node(val value: T) {
-        fun next(): T = TODO()
+    fun isEmpty() = numberOfElements == 0
+
+    private inner class Node(val data: T) {
+        fun next(): Node? = null
     }
 }
