@@ -1,27 +1,27 @@
 package com.fernandocejas.crackinginterview.tree
 
-class Node<T>(val data: T) {
-    private var leftChild: Node<T>? = null
-    private var rightChild: Node<T>? = null
+class Node<T>(private val data: T) {
+    var left: Node<T>? = null
+    var right: Node<T>? = null
 
-    fun left(data: T) {
+    fun addLeft(data: T) {
         val newNode = Node(data)
-        when (leftChild == null) {
-            true -> leftChild = newNode
+        when (left == null) {
+            true -> left = newNode
             else -> {
-                newNode.leftChild = leftChild
-                leftChild = newNode
+                newNode.left = left
+                left = newNode
             }
         }
     }
 
-    fun right(data: T) {
+    fun addRight(data: T) {
         val newNode = Node(data)
-        when (rightChild == null) {
-            true -> rightChild = newNode
+        when (right == null) {
+            true -> right = newNode
             else -> {
-                newNode.rightChild = rightChild
-                rightChild = newNode
+                newNode.right = right
+                right = newNode
             }
         }
     }
