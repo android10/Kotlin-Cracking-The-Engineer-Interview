@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test
 
 
 
-internal class ArrayTest {
+internal class ArrayProblemsTest {
 
-    private val array = Array()
+    private val array = ArrayProblems()
 
     @Test fun `find duplicate - brute force`() {
         array.findDuplicateBruteForce(arrayOf(3, 5, 8, 9, 11, 5, 4, 1, 6)) `should be equal to` 5

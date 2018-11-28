@@ -3,9 +3,9 @@ package com.fernandocejas.crackinginterview.list
 import org.amshove.kluent.`should be equal to`
 import org.junit.jupiter.api.Test
 
-internal class LinkedListTest {
+internal class LinkedListProblemsTest {
 
-    private val linkedList = LinkedList()
+    private val linkedList = LinkedListProblems()
 
     @Test fun `find middle element happy cases`() {
         val myLinkedListOne = java.util.LinkedList<String>()

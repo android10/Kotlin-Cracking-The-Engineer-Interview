@@ -11,7 +11,7 @@ import kotlin.Array
  * In order to create a shorter or longer array, you need to create a new array and copy
  * all elements from old to new.
  */
-class Array {
+class ArrayProblems {
 
     /**
      * PROBLEM:

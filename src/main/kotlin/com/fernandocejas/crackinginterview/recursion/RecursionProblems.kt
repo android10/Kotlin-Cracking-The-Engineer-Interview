@@ -1,13 +1,13 @@
 package com.fernandocejas.crackinginterview.recursion
 
 /**
- * Recursion is a computer programming technique involving the use of a procedure,
+ * RecursionProblems is a computer programming technique involving the use of a procedure,
  * subroutine, function, or algorithm that calls itself in a step having a termination
  * condition so that successive repetitions are processed up to the critical step where
  * the condition is met at which time the rest of each repetition is processed from the
  * last one called to the first.
  */
-class Recursion {
+class RecursionProblems {
 
     /**
      * The factorial function, often denoted as n!, describes the operation of multiplying

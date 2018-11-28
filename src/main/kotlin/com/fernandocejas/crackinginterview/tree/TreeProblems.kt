@@ -1,6 +1,6 @@
 package com.fernandocejas.crackinginterview.tree
 
-class Tree {
+class TreeProblems {
 
     /**
      * Create the following tree structure:
